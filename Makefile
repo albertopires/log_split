@@ -1,0 +1,16 @@
+CC=gcc
+CFLAGS=-Wall -Wextra -g -pedantic -std=c11 -D_GNU_SOURCE -O2
+export VERS='"v1.0.1 - 03/Jul/2020"'
+export GIT_HASH=\"`git log --pretty=format:'%h' -n 1`\"
+
+all: log_split
+
+clean:
+	find . -name "*.o" -exec rm {} \;
+	rm -f log_split
+
+log_split: log_split.o
+	$(CC) $(CFLAGS) $(LFLAGS) -o log_split log_split.o -Wl,-rpath,'$$ORIGIN'/local_libs
+
+log_split.o: log_split.c
+	$(CC) $(CFLAGS) -DVER=$(VERS) -DBUILD=$(GIT_HASH) -c $*.c -o $@
