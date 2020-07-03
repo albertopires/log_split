@@ -1,0 +1,5 @@
+Changelog for 1.0.1
+
+2020-07-03  Alberto Pires de Oliveira Neto  <alberto.pires.on@gmail.com>
+
+	* Turn on/off log writing via signal hangup
