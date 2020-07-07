@@ -7,7 +7,7 @@ Changelog for 1.0.1
 ---
 Changelog for 1.1.0
 
-2020-07-03  Alberto Pires de Oliveira Neto  <alberto.pires.on@gmail.com>
+2020-07-07  Alberto Pires de Oliveira Neto  <alberto.pires.on@gmail.com>
 
 	* Add command line parser
 	* Add option to start with the log writer turned off
