@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -g -pedantic -std=c11 -D_GNU_SOURCE -O2
-export VERS='"v1.0.1 - 03/Jul/2020"'
+export VERS='"v1.1.0 - 07/Jul/2020"'
 export GIT_HASH=\"`git log --pretty=format:'%h' -n 1`\"
 
 all: log_split
