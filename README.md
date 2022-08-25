@@ -2,14 +2,14 @@
 
 Log_split reads data from stdin and writes to a log file, when this log file reaches
 a specified size it is split.  
-The idea is to have a clean way to handle output from a program that is usually send
+The idea is to have a clean way to handle output from a program that is usually sent
 to a log file using something like:  
 `` "exemple_program > output.log" ``  
 While this works fine,
-sometimes the log file may grow very fast or to a very large size and than the only
-way to erase o clean the log file is to restart to program.  
+sometimes the log file may grow very fast or to a very large size and then the only
+way to erase or clean the log file is to restart the program.  
 So far I couldn't find a way to clean the log file so I wrote log_split, that way
-I can have a clean way to compress or delete chunks of log data and also the option
+I can have a clean way to compress or delete chunks of log data and also have the option
 to turn on/off log writing via SIGHUP, witch can be very useful during debugging.
 
 ### Example ###
