@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 			close(fd);
 			snprintf(new_name, 255, "%s_%04d%02d%02d_%02d%02d-%02d",
 					file_name,
-					tm_ptr->tm_year+1900, tm_ptr->tm_mon,
+					tm_ptr->tm_year+1900, tm_ptr->tm_mon+1,
 					tm_ptr->tm_mday,
 					tm_ptr->tm_hour, tm_ptr->tm_min,
 					c++);
@@ -136,11 +136,11 @@ static void show_optimized(void)
 
 static void usageError(const char *progName)
 {
-	fprintf(stderr, "Usage: %s [-h] [-v]\n", progName);
+	fprintf(stderr, "Usage: %s [-h] [-v] [-o]\n", progName);
 	fprintf(stderr, "    -h   Print this message and exit.\n");
 	fprintf(stderr, "    -o   Start with log writer turned off.\n");
 	fprintf(stderr, "    -n   Set log file name prefix.\n");
-	fprintf(stderr, "    -s   Set max log file size.\n");
+	fprintf(stderr, "    -s   Set max log file size. (in MB)\n");
 	fprintf(stderr, "    -v   Display version information.\n");
 	exit(EXIT_FAILURE);
 }

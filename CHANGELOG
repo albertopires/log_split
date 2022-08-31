@@ -11,3 +11,10 @@ Changelog for 1.1.0
 
 	* Add command line parser
 	* Add option to start with the log writer turned off
+
+---
+Changelog for 1.1.0
+
+2022-08-31  Alberto Pires de Oliveira Neto  <alberto.pires.on@gmail.com>
+
+	* Fixed output log file name (incorrect month)

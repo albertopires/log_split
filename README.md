@@ -15,11 +15,11 @@ to turn on/off log writing via SIGHUP, witch can be very useful during debugging
 ### Example ###
 ```
 alberto@home:~/git/log_split (master)$ ./log_split
-Usage: ./log_split [-h] [-v]
+Usage: ./log_split [-h] [-v] [-o]
     -h   Print this message and exit.
     -o   Start with log writer turned off.
     -n   Set log file name prefix.
-    -s   Set max log file size.
+    -s   Set max log file size. (in MB)
     -v   Display version information.
 
 alberto@home:~/git/log_split (master)$ ./any_program 2>&1 | ./log_split -n any_program.log -s 500 &
